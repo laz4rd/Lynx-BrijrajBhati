@@ -108,9 +108,9 @@ export default function HomePage() {
                 <BreadcrumbLink href="#">...</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
-              <BreadcrumbItem>
+              <BreadcrumbPage>
                 <BreadcrumbLink href="#">Brijraj Singh Bhati</BreadcrumbLink>
-              </BreadcrumbItem>
+              </BreadcrumbPage>
             </BreadcrumbList>
           </Breadcrumb>
         </motion.div>
@@ -197,7 +197,7 @@ export default function HomePage() {
               damping: 20
             }}
           >
-            <Badge variant="secondary" className="bg-black text-white dark:bg-white text-black">
+            <Badge variant="secondary" className="bg-black text-white dark:bg-white dark:text-black">
               <BadgeCheckIcon className="w-4 h-4 mr-1" />
               Uni Student
             </Badge>
@@ -213,7 +213,7 @@ export default function HomePage() {
               damping: 20
             }}
           >
-            <Badge variant="secondary" className="bg-black text-white dark:bg-white text-black">
+            <Badge variant="secondary" className="bg-black text-white dark:bg-white dark:text-black">
               <BadgeCheckIcon className="w-4 h-4 mr-1" />
               NMIMS
             </Badge>
