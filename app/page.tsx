@@ -2,7 +2,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { GitHubContributionsChart } from "@/components/github-chart"
+
 import {
   Drawer,
   DrawerClose,
@@ -300,7 +300,7 @@ export default function HomePage() {
                 </blockquote>
                   </CardFooter>
                 </Card>
-                <GitHubContributionsChart />
+                
                 <Card>
                   <CardHeader>
                     <CardTitle>
@@ -331,8 +331,8 @@ export default function HomePage() {
                         <CardDescription>Game Development</CardDescription>
                         <CardAction>
                           <svg
-    width="60"
-    height="60"
+    width="60-"
+    height="64"
     viewBox="0 0 404 308"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
