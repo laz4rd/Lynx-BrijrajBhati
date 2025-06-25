@@ -36,7 +36,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Youtube, Instagram, Twitter, BadgeCheckIcon, Moon, Sun } from "lucide-react"
+import { Youtube, Instagram, Twitter, Check, Moon, Sun } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
 import {
@@ -199,7 +199,7 @@ export default function HomePage() {
             }}
           >
             <Badge variant="secondary" className="bg-black text-white dark:bg-white dark:text-black">
-              <BadgeCheckIcon className="w-4 h-4 mr-1" />
+              <Check className="w-4 h-4 mr-1" />
               Uni Student
             </Badge>
           </motion.div>
@@ -215,7 +215,7 @@ export default function HomePage() {
             }}
           >
             <Badge variant="secondary" className="bg-black text-white dark:bg-white dark:text-black">
-              <BadgeCheckIcon className="w-4 h-4 mr-1" />
+              <Check className="w-4 h-4 mr-1" />
               NMIMS
             </Badge>
           </motion.div>
@@ -280,7 +280,7 @@ export default function HomePage() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 3.0, duration: 0.8 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
               >
                 <div className="space-y-4">
                   <Card>
@@ -331,18 +331,18 @@ export default function HomePage() {
                         <CardDescription>Game Development</CardDescription>
                         <CardAction>
                           <svg
-                            width="64"
-                            height="64"
-                            viewBox="0 0 404 308"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="text-black dark:text-white"
-                          >
-                            <path d="M151.916 6H115.429C110.719 6 106.445 8.75484 104.5 13.0439L8.49492 224.748C4.89231 232.692 10.7008 241.704 19.4237 241.704H53.4487C58.1166 241.704 62.3608 238.997 64.3294 234.764L162.796 23.0608C166.496 15.1063 160.688 6 151.916 6Z" stroke="currentColor" strokeWidth="11" />
-                            <path d="M324.582 6H288.096C283.386 6 279.112 8.75484 277.167 13.0439L181.162 224.748C177.559 232.692 183.367 241.704 192.09 241.704H226.115C230.783 241.704 235.028 238.997 236.996 234.764L335.463 23.0608C339.163 15.1063 333.355 6 324.582 6Z" stroke="currentColor" strokeWidth="11" />
-                            <path d="M384.879 66.2963H348.392C343.682 66.2963 339.408 69.0511 337.463 73.3402L241.458 285.044C237.855 292.988 243.664 302 252.387 302H286.412C291.08 302 295.324 299.293 297.292 295.061L395.759 83.3571C399.459 75.4026 393.651 66.2963 384.879 66.2963Z" stroke="currentColor" strokeWidth="11" />
-                            <path d="M214.953 66.2963H178.466C173.756 66.2963 169.482 69.0511 167.537 73.3402L71.532 285.044C67.9294 292.988 73.7378 302 82.4607 302H116.486C121.154 302 125.398 299.293 127.366 295.061L225.833 83.3571C229.533 75.4026 223.725 66.2963 214.953 66.2963Z" stroke="currentColor" strokeWidth="11" />
-                          </svg>
+    width="60"
+    height="60"
+    viewBox="0 0 404 308"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="text-black dark:text-white"
+  >
+    <path d="M151.916 6H115.429C110.719 6 106.445 8.75484 104.5 13.0439L8.49492 224.748C4.89231 232.692 10.7008 241.704 19.4237 241.704H53.4487C58.1166 241.704 62.3608 238.997 64.3294 234.764L162.796 23.0608C166.496 15.1063 160.688 6 151.916 6Z" stroke="currentColor" strokeWidth="11" />
+    <path d="M324.582 6H288.096C283.386 6 279.112 8.75484 277.167 13.0439L181.162 224.748C177.559 232.692 183.367 241.704 192.09 241.704H226.115C230.783 241.704 235.028 238.997 236.996 234.764L335.463 23.0608C339.163 15.1063 333.355 6 324.582 6Z" stroke="currentColor" strokeWidth="11" />
+    <path d="M384.879 66.2963H348.392C343.682 66.2963 339.408 69.0511 337.463 73.3402L241.458 285.044C237.855 292.988 243.664 302 252.387 302H286.412C291.08 302 295.324 299.293 297.292 295.061L395.759 83.3571C399.459 75.4026 393.651 66.2963 384.879 66.2963Z" stroke="currentColor" strokeWidth="11" />
+    <path d="M214.953 66.2963H178.466C173.756 66.2963 169.482 69.0511 167.537 73.3402L71.532 285.044C67.9294 292.988 73.7378 302 82.4607 302H116.486C121.154 302 125.398 299.293 127.366 295.061L225.833 83.3571C229.533 75.4026 223.725 66.2963 214.953 66.2963Z" stroke="currentColor" strokeWidth="11" />
+  </svg>
                         </CardAction>
 
                       </CardHeader>
@@ -440,14 +440,14 @@ export default function HomePage() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
               >
                 {projects.map((project, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.6 + index * 0.1, duration: 0.6 }}
+                    transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
                   >
                     <Card>
                       <CardHeader>
