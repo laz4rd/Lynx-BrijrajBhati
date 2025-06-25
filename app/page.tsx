@@ -2,6 +2,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import { GitHubContributionsChart } from "@/components/github-chart"
 import {
   Drawer,
   DrawerClose,
@@ -303,6 +304,7 @@ export default function HomePage() {
                   <img src="/Rogue36.png" className="w-24 sm:w-32 h-auto rounded" />
                   <img src="/Lumionix.png" className="w-24 sm:w-32 h-auto rounded" />
                 </div>
+                <GitHubContributionsChart />
               </motion.div>
             </TabsContent>
 
