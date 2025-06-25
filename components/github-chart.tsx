@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
-
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -253,6 +253,9 @@ export function GitHubContributionsChart() {
             />
           </AreaChart>
         </ChartContainer>
+        <Button className="w-full" asChild >
+            <a href="https://github.com/laz4rd" target="_blank" rel="noreferrer">View Github Page</a>
+        </Button>
       </CardContent>
     </Card>
   )
