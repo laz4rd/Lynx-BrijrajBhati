@@ -2,7 +2,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-
+import { Loader2Icon } from "lucide-react"
 import {
   Drawer,
   DrawerClose,
@@ -36,7 +36,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Youtube, Instagram, Twitter, Check, Moon, Sun } from "lucide-react"
+import { Youtube, Instagram, Twitter, Check, Moon, Sun, BadgeCheckIcon } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
 import {
@@ -199,7 +199,7 @@ export default function HomePage() {
             }}
           >
             <Badge variant="secondary" className="bg-black text-white dark:bg-white dark:text-black">
-              <Check className="w-4 h-4 mr-1" />
+              <BadgeCheckIcon/>
               Uni Student
             </Badge>
           </motion.div>
@@ -215,7 +215,7 @@ export default function HomePage() {
             }}
           >
             <Badge variant="secondary" className="bg-black text-white dark:bg-white dark:text-black">
-              <Check className="w-4 h-4 mr-1" />
+              <BadgeCheckIcon/>
               NMIMS
             </Badge>
           </motion.div>
@@ -350,9 +350,10 @@ export default function HomePage() {
                         <p>An indie game development team founded in 2022, has steadily grown into a creative force known for its bold storytelling and immersive sci-fi experiences. Built by a group of passionate developers and visionaries, Rogue has always aimed to push the boundaries of traditional gameplay.</p>
                       </CardContent>
                       <CardFooter>
-                        <Button className="w-full" asChild>
-                          <a href="https://rogue36.web.app" target="_blank" rel="noreferrer">Visit Site</a>
-                        </Button>
+                          <Button size="sm" disabled className="w-full">
+                            <Loader2Icon className="animate-spin" />
+                            Server Down
+                          </Button>
                       </CardFooter>
                     </Card>
                     <Card>
@@ -382,9 +383,10 @@ export default function HomePage() {
                         </p>
                       </CardContent>
                       <CardFooter>
-                        <Button className="w-full" asChild>
-                          <a href="https://rogue36.web.app" target="_blank" rel="noreferrer">Visit Site</a>
-                        </Button>
+                          <Button size="sm" disabled className="w-full">
+                            <Loader2Icon className="animate-spin" />
+                            Server Down
+                          </Button>
                       </CardFooter>
                     </Card>
                     <Card>
