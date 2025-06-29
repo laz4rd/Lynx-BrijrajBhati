@@ -2,7 +2,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { Loader2 } from "lucide-react"
+import { Loader2Icon } from "lucide-react"
 import Image from "next/image"
 import {
   Drawer,
@@ -206,13 +206,13 @@ export default function HomePage() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Tabs - Animated */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.3, duration: 0.5 }}
         >
+          
           <Tabs defaultValue="about" className="w-full">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
