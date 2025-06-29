@@ -111,6 +111,10 @@ export default function HomePage() {
                 <BreadcrumbLink href="#">...</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="../">Brijraj Singh Bhati</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
               <BreadcrumbPage>
                 <BreadcrumbLink href="#">Lumionix</BreadcrumbLink>
               </BreadcrumbPage>
