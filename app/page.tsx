@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Loader2Icon } from "lucide-react"
+import Link from 'next/link'
 import {
   Drawer,
   DrawerClose,
@@ -46,6 +47,7 @@ import {
   TabsContent,
 } from "@/components/ui/tabs"
 import { useTheme } from "next-themes"
+
 
 function ModeToggle() {
   const { setTheme } = useTheme()
@@ -383,9 +385,8 @@ export default function HomePage() {
                         </p>
                       </CardContent>
                       <CardFooter>
-                          <Button size="sm" disabled className="w-full">
-                            <Loader2Icon className="animate-spin" />
-                            Server Down
+                          <Button size="sm"  className="w-full" asChild>
+                            <a href="/lumionix">Visit</a>
                           </Button>
                       </CardFooter>
                     </Card>
