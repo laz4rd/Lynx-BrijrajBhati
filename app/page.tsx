@@ -2,8 +2,9 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-import { Loader2Icon } from "lucide-react"
+import { Loader2Icon, Tag } from "lucide-react"
 import Link from 'next/link'
+import Image from "next/image"
 import {
   Drawer,
   DrawerClose,
@@ -439,62 +440,64 @@ export default function HomePage() {
             </TabsContent>
 
             {/* Links Tab */}
-            <TabsContent value="links" className="space-y-4">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-              >
-                {projects.map((project, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
-                  >
-                    <Card>
-                      <CardHeader>
-                        <CardTitle>{project.title}</CardTitle>
-                        <CardDescription>{project.description}</CardDescription>
-                        <CardAction>{project.tag}</CardAction>
-                      </CardHeader>
-                      <CardContent>
-                        <p>{project.body}</p>
-                      </CardContent>
-                      <CardFooter>
-                        <Drawer>
-                          <DrawerTrigger className="w-full" asChild>
-                            <Button>Visit</Button>
-                          </DrawerTrigger>
-                          <DrawerContent>
-                            <DrawerHeader className="text-center">
-                              {project.image && (
-                                <Avatar className="w-20 h-20 mx-auto mb-2">
-                                  <AvatarImage src={project.image} />
-                                  <AvatarFallback>{project.fallback}</AvatarFallback>
-                                </Avatar>
-                              )}
-                              <DrawerTitle>{project.drawerTitle}</DrawerTitle>
-                              <DrawerDescription>{project.drawerDesc}</DrawerDescription>
-                            </DrawerHeader>
-                            <DrawerFooter>
-                              <Button asChild>
-                                <a href={project.link} target="_blank" rel="noreferrer">
-                                  Proceed
-                                </a>
-                              </Button>
-                              <DrawerClose>
-                                <Button variant="outline">Cancel</Button>
-                              </DrawerClose>
-                            </DrawerFooter>
-                          </DrawerContent>
-                        </Drawer>
-                      </CardFooter>
-                    </Card>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </TabsContent>
+            {/* Links Tab */}
+<TabsContent value="links" className="space-y-4">
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.2, duration: 0.6 }}
+    className="space-y-4"
+  >
+    {projects.map((project, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.3 + index * 0.1, duration: 0.6 }}
+      >
+        <Card>
+          <CardHeader>
+            <CardTitle>{project.title}</CardTitle>
+            <CardDescription>{project.description}</CardDescription>
+            <CardAction>{project.tag}</CardAction>
+          </CardHeader>
+          <CardContent>
+            <p>{project.body}</p>
+          </CardContent>
+          <CardFooter>
+            <Drawer>
+              <DrawerTrigger className="w-full" asChild>
+                <Button>Visit</Button>
+              </DrawerTrigger>
+              <DrawerContent>
+                <DrawerHeader className="text-center">
+                  {project.image && (
+                    <Avatar className="w-20 h-20 mx-auto mb-2">
+                      <AvatarImage src={project.image} />
+                      <AvatarFallback>{project.fallback}</AvatarFallback>
+                    </Avatar>
+                  )}
+                  <DrawerTitle>{project.drawerTitle}</DrawerTitle>
+                  <DrawerDescription>{project.drawerDesc}</DrawerDescription>
+                </DrawerHeader>
+                <DrawerFooter>
+                  <Button asChild>
+                    <a href={project.link} target="_blank" rel="noreferrer">
+                      Proceed
+                    </a>
+                  </Button>
+                  <DrawerClose>
+                    <Button variant="outline">Cancel</Button>
+                  </DrawerClose>
+                </DrawerFooter>
+              </DrawerContent>
+            </Drawer>
+          </CardFooter>
+        </Card>
+      </motion.div>
+    ))}
+  </motion.div>
+</TabsContent>
           </Tabs>
         </motion.div>
       </div>
@@ -503,6 +506,16 @@ export default function HomePage() {
 }
 
 const projects = [
+  {
+    title: "Hexathon 2.0 Demo",
+    description: "Video Submission For Digital Creatives",
+    tag: "Animation",
+    body: "This video was submitted as the submission for the Digital Creatives Department at IETE-SF for NMIMS, Mumbai",
+    link: "https://youtu.be/9sZGmIZ4tIU",
+    fallback: "HX",
+    drawerTitle: "Proceed to Youtube",
+    drawerDesc: "You are now visiting Youtube - Laz4rd"
+  },
   {
     title: "X4 Creative",
     description: "Personal Portfolio",
